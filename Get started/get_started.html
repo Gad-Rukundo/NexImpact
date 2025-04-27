@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexImpact - Get Started</title>
+    <style>
+        #banner {
+     width: 100%; /* Full width */
+    height: 300px; /* Define the height you want */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    background-color: #f4f4f4; /* Optional background color for empty space */
+}
+
+.banner-slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.banner-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+/* Images Inside the Banner */
+.banner-slide img {
+    width: 100%; /* Scale the image to fit the width */
+    height: 100%; /* Scale the image to fit the height */
+    object-fit: fill; /* Ensures the image fills the container without distortion */
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #0d47a1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .banner-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner {
+            display: flex;
+            animation: slide 15s infinite;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            100% { transform: translateX(0); }
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #0d47a1;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .testimonies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .testimony {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .testimony img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .testimony p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .video-section video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .cta-buttons button {
+            padding: 15px 30px;
+            margin: 0 10px;
+            background-color: #0d47a1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .cta-buttons button:hover {
+            background-color: #1565c0;
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            color: #0d47a1;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome to NexImpact
+    </header>
+
+    <div id="banner">
+    <div class="banner-slide">
+        <img src="D:\My Projects\NexImpact\NexImpact Get started\All logos\LKRO.jpg" alt="Slide 1">
+    </div>
+    <div class="banner-slide">
+        <img src="D:\My Projects\NexImpact\NexImpact Get started\All logos\biocoor.png" alt="Slide 2">
+    </div>
+    <div class="banner-slide">
+        <img src="D:\My Projects\NexImpact\NexImpact Get started\All logos\lead.jpg" alt="Slide 3">
+    </div>
+</div>
+
+    <div class="content">
+        <div class="section-title">Get Started with NexImpact</div>
+
+        <p>NexImpact is here to empower NGOs, drive partnerships, and amplify your impact. Let us help you connect, collaborate, and achieve your goals with ease.</p>
+
+        <div class="testimonies">
+            <div class="testimony">
+                <img src="D:\My Projects\NexImpact\NexImpact Get started\Get started\Gad.jpg" alt="Testimony User">
+                <p>"NexImpact transformed the way we manage our projects and collaborate with donors."</p>
+                <p>- Gad RUKUNDO, Volunteer Coordinator</p>
+            </div>
+            <div class="testimony">
+                <img src="D:\My Projects\NexImpact\NexImpact Get started\Get started\founder.jpg" alt="Testimony User">
+                <p>"Thanks to NexImpact, our impact tracking has become seamless and transparent."</p>
+                <p>- Jean Claude MUHIRE, Founder and Executive Director of LOVE THE KIDS Rwanda organization</p>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <p>See NexImpact in action:</p>
+            <video controls>
+                <source src="D:\My Projects\NexImpact\NexImpact Get started\Get started\Merry christmas.mp4"" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="signup.html"><button>Sign Up Now</button></a>
+            <a href="get.html"><button>Learn More</button></a>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-button">&larr; Back to Home</a>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".banner-slide");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+            if (i === index) {
+                slide.classList.add("active");
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length; // Loop back to the first slide
+        showSlide(currentIndex);
+    }
+
+    // Initialize the first slide
+    showSlide(currentIndex);
+
+    // Set interval for looping
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaboration Tools - NexImpact</title>
+    <style>
+        /* Same styles as before */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; }
+        header { background-color: #0d47a1; color: white; padding: 10px 20px; text-align: center; }
+        section { padding: 20px; max-width: 1200px; margin: 0 auto; }
+        .feature-card, .testimonial-card { background: white; margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); display: flex; gap: 20px; }
+        .feature-card img, .testimonial-card img { width: 150px; height: 150px; border-radius: 10px; object-fit: cover; }
+        .testimonial-content { flex: 1; }
+        .testimonial-content h3, .testimonial-content p { margin: 0; }
+        .interactive-section { background-color: #e8f5e9; padding: 20px; border: 1px solid #c8e6c9; border-radius: 5px; margin: 20px 0; }
+        .feedback-form textarea { width: 100%; min-height: 100px; border: 1px solid #ccc; border-radius: 5px; padding: 10px; }
+        .feedback-form button { padding: 10px; background-color: #0d47a1; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .feedback-form button:hover { background-color: #1565c0; }
+        .back-button { display: inline-block; margin-top: 20px; padding: 10px 15px; background-color: #0d47a1; color: white; text-decoration: none; border-radius: 5px; }
+        .back-button:hover { background-color: #1565c0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Collaboration Tools</h1>
+    </header>
+    <section>
+        <h2>Enhance Teamwork with NexImpact</h2>
+        <p>Our collaboration tools are designed to bring your team together and ensure seamless communication, productivity, and teamwork within your organization.</p>
+
+        <!-- Features -->
+        <div class="feature-card">
+            <img src="https://via.placeholder.com/150" alt="Real-Time Messaging">
+            <div>
+                <h3>Real-Time Messaging</h3>
+                <p>Stay connected with your team through secure, real-time messaging. Share updates, brainstorm ideas, and ensure everyone is on the same page.</p>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <h2>User Testimonials</h2>
+        <div class="testimonial-card">
+            <img src="D:\My Projects\NexImpact\NexImpact Get started\Get started\parent 2.jpg" alt="User Image">
+            <div class="testimonial-content">
+                <h3>JC.Muhire</h3>
+                <p>"The collaboration tools have transformed the way we work as a team. Highly recommended!"</p>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="D:\My Projects\NexImpact\NexImpact Get started\Get started\Gad.jpg" alt="User Image">
+            <div class="testimonial-content">
+                <h3>Gad-Rukundo</h3>
+                <p>"Using NexImpact's tools, we achieved greater transparency and improved project outcomes."</p>
+            </div>
+        </div>
+
+        <!-- Feedback Form -->
+        <div class="interactive-section">
+            
+            
+            <div class="interactive-section">
+            <h3>Interactive Demo</h3>
+            <p>Experience how our collaboration tools work! Watch a short video or explore a live demo to see the impact firsthand.</p>
+            <video width="80%" controls>
+                <source src="D:\My Projects\NexImpact\NexImpact Get started\Get started\Merry christmas.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>We Value Your Feedback</h3>
+            <p>How can we improve our collaboration tools? Let us know your thoughts:</p>
+            <form class="feedback-form" id="feedbackForm">
+                <textarea id="feedbackText" placeholder="Share your feedback here..."></textarea>
+                <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+            </form>
+        </div>
+
+        <a href="index.html" class="back-button">Back to Home</a>
+    </section>
+
+    <script>
+        function submitFeedback() {
+            const feedbackText = document.getElementById('feedbackText').value;
+            if (feedbackText.trim() === '') {
+                alert('Please enter your feedback before submitting.');
+                return;
+            }
+
+            fetch('submit_feedback.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ feedback: feedbackText })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                document.getElementById('feedbackText').value = '';
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

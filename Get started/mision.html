@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mission & Vision</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #64b5f6, #81c784);
+            color: #263238;
+        }
+        header {
+            background-color: #0d47a1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .back-icon {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            background: #64b5f6;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .back-icon:hover {
+            background: #42a5f5;
+        }
+        .container {
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #0d47a1;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        .rating-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .rating-section label {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        .rating-section input {
+            margin: 5px;
+        }
+        .rating-section button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #0d47a1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .rating-section button:hover {
+            background-color: #1565c0;
+        }
+        footer {
+            background-color: #263238;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-icon">&larr; Back to Home</a>
+        <h1>Mission and Vision</h1>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Our Mission</h2>
+            <p>
+                At NexImpact, our mission is to <strong>empower NGOs and social enterprises</strong> by providing a cutting-edge platform that fosters <strong>collaboration, innovation, and measurable impact</strong>.
+            </p>
+            <p>
+                We strive to:
+                <ul>
+                    <li><strong>Unite changemakers</strong> globally by simplifying partnerships and bridging the gap between donors, volunteers, and organizations.</li>
+                    <li><strong>Streamline operations</strong> through intuitive tools that save time, reduce costs, and amplify outreach.</li>
+                    <li><strong>Promote transparency</strong> by offering real-time impact tracking and reporting to build trust and accountability.</li>
+                </ul>
+            </p>
+            <p>Together, we aim to <strong>drive positive change, transform lives, and create a sustainable future</strong> for communities worldwide. NexImpact is not just a platform&mdash;it’s a movement to make meaningful impact accessible to all.</p>
+        </div>
+
+        <div class="section">
+            <h2>Our Vision</h2>
+            <p>
+                To become the global leader in enabling social good by building the most trusted and comprehensive platform for empowering nonprofits and social enterprises to maximize their impact. 
+            </p>
+            <p>
+                NexImpact envisions a future where every organization, regardless of size, has the tools, partnerships, and resources to create lasting and meaningful change in the world.
+            </p>
+        </div>
+
+        <div class="rating-section">
+            <label for="rating">Rate Our Mission & Vision:</label>
+            <input type="radio" id="rating1" name="rating" value="1"> 1
+            <input type="radio" id="rating2" name="rating" value="2"> 2
+            <input type="radio" id="rating3" name="rating" value="3"> 3
+            <input type="radio" id="rating4" name="rating" value="4"> 4
+            <input type="radio" id="rating5" name="rating" value="5"> 5
+            <br>
+            <button onclick="alert('Thank you for your feedback!')">Submit Rating</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 NexImpact. All rights reserved.</p>
+    </footer>
+</body>
+</html>

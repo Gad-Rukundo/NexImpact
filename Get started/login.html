@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="log.css">
+    <title>NexImpact - Login</title>
+    <style type="text/css">
+         .back-icon {
+            font-size: 30px;
+            color: #000;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .back-icon:hover {
+            color: #007bff;
+        }
+
+        /* Align the back icon to the top left */
+        .back-icon-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+   
+    <script src="script.js" defer></script>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+     <!-- Back Icon - Takes the user to the home page -->
+  <div class="back-icon-container">
+        <a href="signup.html">
+            <i class="fas fa-arrow-left back-icon"></i>
+        </a>
+    </div>
+    <div class="login-container">
+        <h1>Welcome to NexImpact</h1>
+        <form id="login-form">
+            <!-- Username Field -->
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+
+            <!-- Password Field -->
+            <div class="input-group password-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <i class="far fa-eye" id="toggle-password"></i>
+            </div>
+
+            <!-- Login Button -->
+            <button type="submit" class="btn-primary">Login</button>
+
+            <!-- Forgot Password Link -->
+            <p class="forgot-password">
+                <a href="#" id="forgot-password">Forgot Password?</a>
+
+            </p>
+        </form>
+    </div>
+
+    <!-- Modal for Password Reset -->
+    <div id="reset-modal" class="modal">
+        <div class="modal-content">
+            <h2>Reset Your Password</h2>
+            <p>Enter your email to receive a password reset link:</p>
+            <form id="reset-form">
+                <input type="email" id="reset-email" placeholder="Enter your email" required>
+                <button type="submit" class="btn-secondary">Send Reset Link</button>
+            </form>
+            <button id="close-modal" class="btn-close">Close</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // Toggle Password Visibility
+document.getElementById('toggle-password').addEventListener('click', function () {
+    const passwordField = document.getElementById('password');
+    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', type);
+    this.classList.toggle('fa-eye-slash');
+});
+
+// Handle Forgot Password Link
+document.getElementById('forgot-password').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('reset-modal').style.display = 'flex';
+});
+
+// Close Modal
+document.getElementById('close-modal').addEventListener('click', function () {
+    document.getElementById('reset-modal').style.display = 'none';
+});
+
+// Handle Password Reset Form Submission
+document.getElementById('reset-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const email = document.getElementById('reset-email').value;
+    alert(`A password reset link has been sent to ${email}`);
+    document.getElementById('reset-modal').style.display = 'none';
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Management - NexImpact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #0d47a1;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #0d47a1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background-color: #1565c0;
+        }
+        .rating-section {
+            margin-top: 20px;
+        }
+        .rating-section h3 {
+            margin-bottom: 10px;
+        }
+        .rating-stars {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .rating-stars span {
+            color: #ddd;
+        }
+        .rating-stars span:hover,
+        .rating-stars span.selected {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Donor Management</h1>
+    </header>
+    <section>
+        <h2>Organize Your Donors Efficiently</h2>
+        <p>Our donor management tools allow you to streamline all your donor interactions, track their contributions, and maintain transparency.</p>
+        <img src="D:\My Projects\NexImpact\NexImpact Get started\Get started\founder.jpg" alt="Donor Management Example" style="max-width:100%; height:auto; margin: 20px 0;">
+        <p>With NexImpact's donor management system, you can:</p>
+        <ul>
+            <li>Maintain a detailed database of donors</li>
+            <li>Track donation history</li>
+            <li>Generate personalized communication</li>
+            <li>Provide real-time impact updates</li>
+        </ul>
+        <a href="index.html" class="back-button">Back to Home</a>
+        <div class="rating-section">
+            <h3>Rate Our Donor Management Feature:</h3>
+            <div class="rating-stars">
+                <span data-value="1">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="5">&#9733;</span>
+            </div>
+        </div>
+    </section>
+    <script>
+        const stars = document.querySelectorAll('.rating-stars span');
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                stars.forEach(s => s.classList.remove('selected'));
+                star.classList.add('selected');
+                alert(`You rated ${star.dataset.value} star(s). Thank you for your feedback!`);
+            });
+        });
+    </script>
+</body>
+</html>
